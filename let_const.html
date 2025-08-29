@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let / const</title>
+</head>
+<body>
+    <script>
+
+        let name = "ajw";
+        document.write(name+'<br>');
+
+        //let은 중복선언불가
+        //let name = 'kmj';
+        name = 'kmj' ; //let은 재할당은 가능
+        document.write(name+'<br>');
+
+        const PI = 3.141592
+        document.write(PI+'<br>');
+
+        //const는 중복선언 불가
+        //const PI = 3.14;
+        //console.write(PI);
+
+        //const는 재할당도 불가
+        //PI=3.14;
+        //console.write(PI);
+        
+        // 블록 레벨 스코프
+        let a = 1;   
+        //전역 변수 - a=1
+        if(true){
+            let a = 5;
+            console.log(a)
+        }
+        //지역변수(블록) a=5
+        console.log(a)
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<hr>var은 변수를 중복해서 선언할수있다.")
+
+        var a = 1;
+        document.write("<br>a= ",a)
+        var a = 2;
+        document.write("<br>a= ",a)
+        var a = 3;
+        document.write("<br>a= ",a)
+
+        document.write("<hr>let은 변수를 중복해서 선언할수없다.")
+        let b = 1;
+        document.write("<br>",b);
+        document.write("<br>여기에서 b를 let으로 중복선언시 오류가 발생한다.<br> b = 2 <-- 스크립트 정지")
+
+        document.write("<hr>const는 중복 선언도 불가능하고 변수선언시 변경이 불가능하다.")
+        document.write("<hr><br>")
+
+        var a =5;
+        document.write("<br>",a);
+        {var a =3; a;
+            document.write("<br>",a)
+        }
+        
+    </script>
+<hr><br>
+    <script>
+        var c =5;
+        document.write("<br>",c)
+        
+        {let c=3;c;
+            document.write("<br>",c)
+        }
+        
+
+    </script>
+</body>
+</html>
