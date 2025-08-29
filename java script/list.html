@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5];
+        document.write(arr+" 배열","<br>","<hr>");
+    </script>
+
+    <script>
+        var li =['a','b','c','d','e'];
+        li.push('f');
+        document.write(li+" 푸시","<br>","<hr>");
+        li.concat(['f','g']);
+        //concat은 실행시에 저장이안되므로 변수에 저장해야 저장이된다.
+        document.write(li,"<br>");
+        li=li.concat(['f','g']);
+        document.write(li +" concat","<br>","<hr>");
+        li.unshift('z');
+        document.write(li+" unshift","<br>","<hr>");
+    </script>
+    <script>
+        var li =['a','b','c','d','e'];
+        li.splice(2,0,'B');
+        document.write(li,"<br>");
+        li.splice(4,2,'z');
+        document.write(li+" 스플라이스","<br>");
+    </script>
+    <hr>
+    <script>
+         var li =['a','b','c','d','e'];
+         document.write(li,"<br>");
+        li.shift();
+         document.write(li+" shift","<br>");
+         li.shift();
+         document.write(li,"<br>");
+         li.pop();
+         document.write(li+" pop","<br>");
+    </script>
+    <hr>
+    <script>
+        var li = ['c','e','b','a','d'];
+        document.write(li+" 정리되지않은 배열","<br>");
+        li.sort();
+        document.write(li+" sort된 배열","<br>");
+        var li = ['c','e','b','a','d'];
+        document.write(li,"<br>");
+        li.reverse();
+        document.write(li+" reverse된 배열","<br>");
+    </script>
+    <hr>
+    <script>
+        document.write("배열정리","<br>","<hr>")
+        document.write("배열을 만드는 방법","<br>")
+        document.write("리터럴 방식","<br>")
+        var arr=["apple","banana","tamato"];
+        document.write(arr,"<br>");
+        document.write("생성자 방식","<br>")
+        var arr1=new Array("apple","banana","tomato",1,2);
+        document.write(arr1,"<br>","<hr>");
+        document.write("인덱스","<br>");
+        document.write(arr[0])
+        document.write("=arr[0]<br><hr>")
+        document.write("배열의 길이","<br>");
+        document.write(arr.length,"<br><hr>");
+    </script>
+
+    <script>
+        document.write("배열출력","<br>");
+        document.write("for 문","<br>");
+        var arr = ["사과","배","바나나"]
+        for(var i=0;i<arr.length;i++){
+            document.write("index: "+i+"Element: "+ arr[i]+"<br>");
+        }
+
+        document.write("for in 문","<br>")
+
+    </script>
+
+    <script>
+        var member = ['cemy','stomy','windy']
+        document.write("<리터럴 방식><br>");
+        document.write(member[0],"<br>");
+        document.write(member[1],"<br>");
+        document.write(member[2],"<br>");
+
+        function get_members(){
+            return ['cemy','stomy','windy'];
+        }
+
+        var members = get_members();
+
+        document.write(members[0],"<br>");
+        document.write(members[1],"<br>");
+        document.write(members[2],"<br>");
+
+        for (var i=0; i<members.length; i++){
+            document.write(members[i].toUpperCase()+"<br>");
+        }
+
+    </script>
+
+    <script>
+
+        document.write("배열을 만드는방법2<br>")
+        var fruit2 = new Array ("strawberry","orange","apple","cherry");
+        document.write(fruit2[3]"<br>");
+        document.write(fruit2.length"<br>");
+
+        for (var i in fruit2){
+            document.write(fruit2[i]);
+        }
+
+
+      
+        
+
+    </script>
+
+
+</body>
+</html>

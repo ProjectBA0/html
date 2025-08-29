@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        document.write("<br>for ...in 문 (인덱스 접근방식)<br><hr>")
+        var arr=["사과","배","바나나"];
+        for (var i =0;i<arr.length;i++){
+            document.write("<br><br>",arr[i],"<br>");
+        }
+        document.write("<hr>")
+        for(var i in arr){
+            document.write("<br><br>",arr[i],"<br>");
+        }
+          
+    </script>
+
+    <hr>
+    <script>
+    document.write("<br>for ...in 문 (인덱스 접근방식)<br>")
+    var city=['서울','대구','대전','부산'];
+    for(var i in city){
+        document.write("<br>",i,"<br>");
+    }
+        document.write("<hr>");
+    document.write("<br>for ...of 문 (value 접근방식)<br>")
+    var city=['서울','대구','대전','부산'];
+    for(var i of city){
+        document.write("<br>",i,"<br>");
+    }
+    document.write("<hr>");
+    var num = [1,2,3];
+
+    num.forEach(function(value,index,array){
+    document.write("<br>value = ",value);
+    document.write("<br>index = ",index);
+    document.write("<br>array = ",array,"<br><br><hr>");
+    });
+    document.write("<br><br>forEach의 값은 내부에서만 호출할수있다.<br>")
+    </script>
+    
+    <script>
+        document.write("<br><hr>map()메소드")
+
+        var base=[10,20,30];
+
+        base.map(function(v,i,arr){
+        document.write("<br>",i +":",v * 10);
+        })
+         document.write("<br><br><hr>")
+        base.map(function(v){
+        document.write(v*8," <br>")
+        })
+    </script>
+    <hr>
+    <script>
+        document.write("filter()메소드<br>")
+        var data =  ['javascript',20,30,'jQuery'];
+
+        data.filter(function(value,index,array){
+            document.write("<br>value= ",value)
+            document.write("<br>index= ",index)
+            document.write("<br><hr>array= ",array)
+        }
+    )
+        var num = data.filter(function(value){
+            return typeof value === 'number';
+        }
+    );
+        document.write("<br><hr>array= ",data)
+        document.write("<br>num= ",num)
+    </script>
+</body>
+</html>
