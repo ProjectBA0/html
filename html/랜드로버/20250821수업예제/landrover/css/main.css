@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* reset-초기화 */
+* {margin:0; padding: 0; box-sizing: border-box;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+/* 헤더 */
+header {width: 1100px; height: 100px; margin: 0 auto;}
+#logo {width: 130px; height: 70px; float: left; margin-top:15px;}
+
+nav {width: 740px; height: 30px; float:right; margin-top: 35px;}
+nav li {float: left; padding: 0 50px; font-weight: bold;}
+
+/* 슬라이더 */
+#slider {width: 1100px; height: 450px; margin: 0 auto;}
+
+/* 섹션 */
+section {width: 1100px; height: 280px; margin: 0 auto;}
+
+article {width: 340px; height: 145px; float:left; margin:60px 13px ;}
+
+article > img {float: left; margin-right: 10px;}
+
+.icon {width: 100px; height: 100px; float: left; margin: 0 6px; text-align: center;}
+
+/* 풋터 */
+footer {width: 1100px; height: 100px; margin: 0 auto;
+background-color: #eee;}
+footer img {float: left; margin-top: 15px;}
+footer p {float: right; margin: 40px 20px 0 0;}

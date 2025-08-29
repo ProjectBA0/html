@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>CSS3 Transition</title>
+
+    <style>
+
+      #windmill {
+        background-color: orange;
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+        -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+        transition: all 2s
+      }
+
+      body:hover #windmill{
+        width: 300px;
+        height: 300px;
+        -webkit-transform: rotateX(90deg); 
+        transform: rotateX(90deg); 
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>전환(transition) 효과와 변환(transform) 효과의 동시 적용</h1>
+    <div id="windmill"></div>
+    <p>브라우저 위로 마우스를 올려놔 보세요!!</p>
+
+  </body>
+
+</html>

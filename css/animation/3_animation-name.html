@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      animation-name: move, fadeOut, changeColor; /* 하나 이상의 애니메이션 이름을 지정 */
+      animation-duration: 5s; /* 한 싸이클의 애니메이션에 소요되는 시간 */
+      animation-iteration-count: infinite; /* 애니메이션 주기의 재생 횟수, 기본값은 1이며 infinite로 무한반복  */
+    }
+    @keyframes move {
+      from { left: 0; }
+      to   { left: 300px; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @keyframes changeColor {
+      from { background-color: red; }
+      to   { background-color: blue; }
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+</html>

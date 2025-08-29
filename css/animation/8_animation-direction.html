@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    div {
+      position: absolute;
+      left: 40px;
+      width: 150px;
+      height: 50px;
+      background: #000;
+      color: #fff;
+      /* animation-name:direction; */
+      animation-duration: 2s;
+      animation-iteration-count: 3;
+      animation-timing-function: ease-in;
+    }
+
+    .normal {
+      top: 20px;
+      animation-direction: normal;
+    }
+
+    .alternate {
+      top: 80px;
+      animation-direction: alternate;
+    }
+
+    .reverse {
+      top: 140px;
+      animation-direction: reverse;
+    }
+
+    .a_reverse {
+      top: 200px;
+      animation-direction: alternate-reverse;
+    }
+
+    @keyframes direction {
+      from {
+        left: 40px;
+      }
+
+      to {
+        left: 300px;
+      }
+    }
+  </style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(function () {
+      $('div').click(function () {
+        $(this).css('animation-name', 'direction');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="normal">normal</div>
+  <div class="alternate">alternate</div>
+  <div class="reverse">reverse</div>
+  <div class="a_reverse">alternate-reverse</div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <script>
+
+        var user_height = prompt("당신의 신장은?", "0");
+
+        var user_weight = prompt("당신의 체중은?", "0");
+
+        var normal_weight = (user_height - 100) * 0.9;
+
+        var result = user_weight > normal_weight ? "적정 몸무게 이상" : "적정 몸무게 미달";
+
+        document.write(result);
+
+    </script>
+
+
+
+</body>
+
+</html>

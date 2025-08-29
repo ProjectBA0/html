@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Untitled Document</title>
+
+        <style>
+            /* z-index는 레이어 개념
+               값이 클수록 위로 올라옴(음수 가능)
+            */
+            .top{position:absolute; top:90px; left:100px; z-index:3;}
+            .middle{position:absolute; top:60px; left:60px; z-index:2;}
+            .bottom{position:absolute; top:30px; left:20px; z-index:1;}
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <img src="img1.gif" class="top">
+        <img src="img2.gif" class="middle">
+        <img src="img3.gif" class="bottom">
+
+    </body>
+</html>

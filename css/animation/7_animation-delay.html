@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      position: absolute;
+      left: 100px;
+      width: 100px;
+      height: 50px;
+      background: #000;
+      color: #fff;
+      animation-name:boxDelay;
+      animation-timing-function: linear;
+      animation-duration: 2s
+    }
+  
+    .zero {
+      top: 20px;
+      animation-delay: 0;  /* 애니메이션이 바로 재생 */
+    }
+  
+    .now {
+      top: 80px;
+      animation-delay: now;  /* 애니메이션이 바로 재생 */
+    }
+  
+    .s {
+      top: 140px;
+      animation-delay: 2s;  /* 2초후 재생 */
+    }
+  
+    .minus {
+      top: 200px;
+      animation-delay: -1s;  /* 1초가 지난 후인, 화면 가운데 위치의 장면부터 애니메이션이 재생*/
+    }
+  
+    @keyframes boxDelay {
+      from {
+        left: 100px;
+      }
+  
+      to {
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="zero">0</div>
+  <div class="now">now</div>
+  <div class="s">2s</div>
+  <div class="minus">-1s</div>
+</body>
+</html>

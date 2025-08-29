@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초문법</title>
+    <style>
+        /* css작성 */
+    </style>
+</head>
+<body>
+    <h1>자바스크립트의 수행 결과 출력</h1>
+
+    <table border="1px solid black" width="300px">
+        <tr bgcolor="yellow">
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <hr>
+    <script>
+        //window.alert("(1)경고창에 출력");
+        console.log("(2) 자바스크립트 콘솔에 출력");
+        document.write("(3) 도큐먼트 영역에 출력")
+
+    </script>
+    
+    <h2>자바스크립트를 재미있게 학습합시다요(^^)</h2>
+    
+    <script>
+        var box; //변수선언
+        box = 100;
+        box = 30;
+        document.write(box,'<hr>');
+        
+        //문자데이터
+        var s = 'javascript';
+        var num = 100;
+        var tag = "<h1>String</h1>";
+
+        document.write(s,'<br>');
+        document.write(num,'<br>');
+        document.write(tag,'<br>');
+        document.write(typeof num,'<hr>');
+
+        //숫자 데이터
+        var s = 100;
+        var t = Number('500');  //문자형 데이터를 숫자데이터로변환 int함수와 비슷
+
+        document.write(s,'<br>');
+        document.write(t,'<br>');
+        document.write(typeof t,'<br>');
+        document.write(s+t,'<hr>')
+
+        // 논리형 데이터
+        var s = true;
+        var t = 10>=100; //false
+        var k = Boolean('hello') //true
+        var l = Boolean("") //false
+        var m = Boolean(0)  //false
+        var h = Boolean("홍길동") //true
+
+        document.write(s,'<br>');
+        document.write(t,'<br>');
+        document.write(k,'<br>');
+        document.write(l,'<br>');
+        document.write(m,'<br>');
+        document.write(h,'<br>');
+
+        //입력
+        "<hr>"
+        var age = window.prompt("당신의 연령은?","0")
+
+        if (age >= 20){
+            document.write("성인");
+        }
+        else {
+            document.write("미성년");
+        }
+
+        //문자열로 태그 입력
+        var t="<table border='1'>";
+        t+="<tr>";
+        t+="<td>1</td><td>2</td><td>3</td>";
+        t+="</tr>";
+        t+="</table>";
+        document.write(t);
+        
+        
+
+    </script>
+   
+</body>
+</html>

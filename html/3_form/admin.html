@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>text 입력양식 만들기</title>
+</head>
+
+<body>
+
+    다음의 사항을 입력해 주세요.
+    <br>
+    <br>
+    <form>
+        이름:<input type="text" name="이름" size=30><br>
+        암호:<input type="password" name="암호" size=30><br>
+        주소:<input type="text" name="주소" size=30><br><br>
+
+        <input type="submit" value="확인">
+        <input type="reset" value="취소"><br>
+    </form>
+    <br>
+    <br>
+    <form>
+        다시 이력하고 싶으시면<br>
+        <input type="reset" value="취소">를 클릭해 주세요.<br>
+
+        <input name="경험" type="radio" value="yes" checked="checked">있다.<br>
+        <input name="경험" type="radio" value="no">없다.<br>
+        <input name="경험" type="radio" value="first">처음이다.<br><br><br>
+    </form>
+
+
+    당신은 컴퓨터를 주로 어떤 용도로 이용하십니까?<br>
+    해당 항목을 모두 체크해 주세요.
+    <br>
+    <br>
+    <form>
+        <input name="용도" type="checkbox" value="pro" checked="checked">
+        프로그램개발<br>
+        <input name="용도" type="checkbox" value="gam" checked="checked">
+        게임<br>
+        <input name="용도" type="checkbox" value="gra">그래픽작업<br>
+        <input name="용도" type="checkbox" value="pcc">인터넷<br>
+        <input name="용도" type="checkbox" value="etc">기타<br>
+    </form>
+
+</body>
+
+</html>

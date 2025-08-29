@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>display: flex</title>
+    <style>
+      .container {width:500px; height:400px; background-color:gold; display:flex; align-items:center; justify-content:center;}
+      .container div {width:100px;  background-color:tomato;}
+      .container div:nth-of-type(2) { background-color:red;  align-self:flex-start;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+  </body>
+</html>

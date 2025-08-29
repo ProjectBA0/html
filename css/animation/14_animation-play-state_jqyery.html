@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      position: absolute;
+      top: 70px;
+      left: 100px;
+      width: 100px;
+      height: 50px;
+      margin-left: -90px;
+      background-color: #000;
+      color: #fff;
+      animation: play-state 2s linear infinite alternate;
+    }
+  
+    /* @keyframes rule */
+    @keyframes play-state {
+      from {
+        left: 100px;
+      }
+  
+      to {
+        left: 300px;
+      }
+    }
+  </style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(function () {
+    $('.play').click(function () {
+      // [재생] 버튼을 클릭하면 -webkit-animation-play-state: running 속성 적용
+      $('div').css('animation-play-state', 'running');
+    });
+    $('.stop').click(function () {
+      // [멈춤] 버튼을 클릭하면 -webkit-animation-play-state: paused 속성 적용
+      $('div').css('animation-play-state', 'paused');
+    });
+  });
+</script>
+
+</head>
+
+<body>
+  <button class="play">재생</button>
+<button class="stop">멈춤  </button>
+<div>box</div>
+
+</body>
+</html>
