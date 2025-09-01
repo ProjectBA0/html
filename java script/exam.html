@@ -31,7 +31,7 @@
     </script>
 
     <script>
-        var dan=prompt("구구단?","");
+        //var dan=prompt("구구단?","");
         var result;
         document.write("<h1>"+dan+"단</h1>");
 
@@ -40,5 +40,92 @@
             document.write(dan+"X"+i+"="+result+"<br>");
         }
     </script>
+
+    <script>
+        function gugudan(ele){
+            document.write("<h1>"+ele+"단</h1>");
+            var res
+            for( var i=1;i<10;i++){
+                res=i*ele
+                document.write(ele+"X"+i+"="+res+"<br>")
+            }
+        }
+
+        gugudan(4);
+        var a=5;
+        gugudan(a);
+        
+    </script>
+
+    <script>
+        var res
+        for (var i=2;i<10;i++){
+            document.write("<h1>"+i+"단</h1>")
+            for (var j=1;j<10;j++){
+                res=i*j
+                document.write(i+"X"+j+"="+res+"<br>")
+            }
+        }
+    </script>
+        
+    <script>
+        var arr=[10,30,50]
+        var max=arr[0]
+
+        for (var i=0;i <arr.length;i++){
+            if(max <arr[i]){
+                max = arr[i]
+            }
+        }
+        document.write("<br>최대값= "+max)
+    </script>
+    <br>
+    <script>
+
+        var arr1=[10,30,50];
+        var min=arr[0];
+
+        for (i=0;i<arr.length;i++){
+            if(min>arr[i]){
+                min = arr[i]
+            }
+        }
+        document.write("<br>최소값= "+min)
+    </script>
+
+    <script>
+        var arr2=[10,30,50];
+        var avg=0
+        var sum=0
+
+        for (i=0;i<arr.length;i++){
+            sum+=arr[i]
+        }
+        avg = sum /arr.length
+
+        document.write("<br>평균값= "+avg)
+    </script>
+
+    <script>
+        var num = prompt("입력하세요","0");
+
+        if(isNaN(num)==true){
+            document.write("<br>"+num+" 은 문자");
+        }else
+            document.write("<br>"+num+"은 숫자");{
+        
+        }
+    </script>
+
+    <script>
+        var age = prompt("나이를 입력하세요","")
+        if(age>=20){
+            document.write("<br>성년")
+        }
+        else{
+            document.write("<br>미성년")
+        }
+    </script>
+
 </body>
 </html>

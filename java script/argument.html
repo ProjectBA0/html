@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>함수에서 아규먼트의 타입 체크</h2>
+
+  <hr>
+
+  <button onclick="clickProcess(100);">숫자</button>
+
+  <button onclick="clickProcess('100');">문자열</button>
+
+  <button onclick="clickProcess(true);">논리값</button>
+
+  <button onclick="clickProcess(function(){ });">함수</button>
+
+  <button onclick="clickProcess([ ]);">배열</button>
+
+  <button onclick="clickProcess({ });">객체</button>
+
+  <button onclick="clickProcess();">????</button>
+
+    <h3></h3>
+
+  <script>
+     function clickProcess(p) {
+
+      if (typeof p == "number") {
+        document.getElementsByTagName('h3')[0].innerHTML = "숫자전달"
+      } else if (typeof p == "string") {
+
+       document.getElementsByTagName('h3')[0].innerHTML = "문자열전달"
+      } else if (typeof p == "boolean") {
+
+        document.getElementsByTagName('h3')[0].innerHTML = "논리값전달"
+
+      } else if (typeof p == "function") {
+
+        document.getElementsByTagName('h3')[0].innerHTML = "함수전달"
+
+      } else if (typeof p == "object") {
+
+        if (Array.isArray(p))
+
+          document.getElementsByTagName('h3')[0].innerHTML = "배열객체전달"
+
+        else
+
+          document.getElementsByTagName('h3')[0].innerHTML = "객체전달";
+
+      } else if (typeof p == "undefined") {  // p == undefined
+
+           document.getElementsByTagName('h3')[0].innerHTML = "전달된 아규먼트 없음";
+
+      }
+
+    }
+
+    
+  </script>
+</body>
+</html>

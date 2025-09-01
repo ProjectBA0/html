@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            position: relative;
+            left: 100px;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: orange;
+            animation: ball 1s ease-in Infinite Alternate;
+        }
+
+        @keyframes ball {
+            0% {
+                top: 0px;
+            }
+
+            95% {
+                width: 100px;
+            }
+
+            100% {
+                top: 600px;
+                width: 45px;
+                height: 300px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
