@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .popup {width:100px; height:100px; background-color:gold; display:none;}
+    </style>
+</head>
+
+<body>
+
+    <div class="popup">
+    <button onclick="window.close()">close</button>
+    </div>
+
+    <button id="btn1">stop</button>
+
+
+<script>
+
+
+let view =setTimeout(popup,3000);
+
+ function popup(){
+
+  document.getElementsByClassName('popup')[0].style.display="block";
+
+ }
+
+  btn1.onclick=function(){
+    console.log(view);
+    clearTimeout(view);
+ } 
+</script>
+</body>
+
+
+</html>
