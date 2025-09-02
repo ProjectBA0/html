@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <img src="img/banner_1.jpg" name="meat">
+
+
+    <script>
+        const image = document.getElementsByName("meat");
+        let img_array = ["img/banner_1.jpg","img/banner_2.jpg","img/banner_3.jpg"];
+        let index = 0;
+
+        function slide() {
+            document['meat'].src =img_array[index];
+            index++;
+            if(index >= img_array.length) {
+                index=0;
+            }
+        }
+
+        setInterval(slide,1000);
+    </script>
+</body>
+</html>

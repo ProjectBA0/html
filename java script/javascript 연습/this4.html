@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li id="a">딸기</li>
+      <li id="b">바나나</li>
+      <li id="c">사과</li>
+    </ul>
+    <script>
+this.onclick=function (e){
+  if(e.target.id=="a"){
+    a.style.backgroundColor="red";
+    b.style.backgroundColor="white";
+    c.style.backgroundColor="white";
+  }
+  if(e.target.id=="b"){
+    b.style.backgroundColor="green";
+    a.style.backgroundColor="white"; 
+    c.style.backgroundColor="white";
+  }
+  if(e.target.id=="c"){
+    c.style.backgroundColor="blue";
+    a.style.backgroundColor="white"; 
+    b.style.backgroundColor="white";
+  }
+}
+    </script>
+  </body>
+</html>

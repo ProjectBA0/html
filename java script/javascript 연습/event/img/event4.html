@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+  <body>
+      <img src="/java script/javascript 연습/event/img/apple.jpg" id="chi">
+
+      <h1>과일</h1>
+      <input type="radio" name="a" checked ><span>사과</span>
+      <input type="radio" name="a" ><span>바나나</span>
+      <input type="radio" name="a" ><span>오렌지</span>
+      <input type="radio" name="a" ><span>토마토</span>
+      <input type="radio" name="a" ><span>수박</span>
+
+      <script>
+         this.onclick=function (e){
+            if(document.getElementsByTagName('input')[0].checked==true){
+               chi.src="/java script/javascript 연습/event/img/apple.jpg";
+               document.getElementsByTagName('h1')[0].innerHTML="사과";
+            }
+            if(document.getElementsByTagName('input')[1].checked==true){
+               chi.src="/java script/javascript 연습/event/img/banana.jpg";
+               document.getElementsByTagName('h1')[0].innerHTML="바나나";
+            }
+            if(document.getElementsByTagName('input')[2].checked==true){
+               chi.src="/java script/javascript 연습/event/img/orange.jpg";
+               document.getElementsByTagName('h1')[0].innerHTML="오렌지";
+            }
+            if(document.getElementsByTagName('input')[3].checked==true){
+               chi.src="/java script/javascript 연습/event/img/tomato.jpg";
+               document.getElementsByTagName('h1')[0].innerHTML="토마토";
+            }
+            if(document.getElementsByTagName('input')[4].checked==true){
+               chi.src="/java script/javascript 연습/event/img/watermelon.jpg";
+               document.getElementsByTagName('h1')[0].innerHTML="수박";
+            }
+         }
+      </script>
+   </body>
+</html>

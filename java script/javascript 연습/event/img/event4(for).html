@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+  <body>
+      <img src="" id="chi">
+
+      <h1>과일</h1>
+      <input type="radio" name="a" checked ><span>사과</span>
+      <input type="radio" name="a" ><span>바나나</span>
+      <input type="radio" name="a" ><span>오렌지</span>
+      <input type="radio" name="a" ><span>토마토</span>
+      <input type="radio" name="a" ><span>수박</span>
+
+      <script>
+   
+
+      const fruits = ["사과", "바나나", "오렌지", "토마토", "수박"];
+      const images = ["apple", "banana", "orange", "tomato", "watermelon"];
+      const inputs = document.getElementsByTagName('input');
+      const h1 = document.getElementsByTagName('h1')[0];
+      const chi = document.getElementById('chi');
+
+      document.body.onclick = function() {
+      for (let i = 0; i < inputs.length; i++) {
+         if (inputs[i].checked) {
+            chi.src = "/java script/javascript 연습/event/img/"+images[i]+".jpg"
+            h1.innerHTML = fruits[i];
+            break; // 이미 선택된 걸 찾았으니 반복 종료
+               }
+            }
+         }
+      </script>
+   </body>
+</html>
