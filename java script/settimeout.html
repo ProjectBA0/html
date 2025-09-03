@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .popup {width:100px; height:100px; background-color:gold; display:none;}
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+    <button onclick="window.close()">close</button>
+    </div>
+</body>
+
+<script>
+setTimeout(function(){
+    document.getElementsByClassName('popup')[0].style.display="block";
+},3000);    
+//콜백함수도 가능하다. (매개변수에 직접집어넣기)
+//function popup(){
+    //document.getElementsByClassName('popup')[0].style.display="block";
+//}
+
+
+</script>
+</html>

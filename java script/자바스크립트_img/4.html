@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>4</title>
+
+</head>
+
+<body>
+
+    <img src="img/banner_1.jpg">
+
+    <script>
+        //상단 배너가 계속 바뀐다.  setTimeout
+        var ct = 0;
+        var imgs = new Array("img/banner_1.jpg", "img/banner_2.jpg", "img/banner_3.jpg");
+
+        setTimeout(progress, 1000);
+        
+        function progress() {
+            document.images[0].src = imgs[ct];
+            ct++;
+            setTimeout(progress, 1000);
+            if (ct > 2) {
+                ct = 0;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

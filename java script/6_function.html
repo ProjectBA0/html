@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6_함수</title>
+</head>
+<body>
+    <script>
+        function 함수명(){
+
+        }
+        //함수 선언문
+
+        const func =function(){
+
+        }
+        //함수 표현식(익명함수를 변수에 대입)
+
+        const multi = new Function();
+        // 함수 생성자
+
+
+    </script>
+
+    <script>
+        function test(){
+            document.write("안녕하세요","<br>");
+            document.write("반갑습니다.","<br>")
+        }
+
+        test();
+
+        let i =0;
+        function myFnc(){
+            i++;
+            document.write("hello"+i,"<br>")
+        }
+
+        myFnc();
+
+        const theFnc=function(){
+            i++;
+            document.write("bye"+i,"<br>");
+        }
+
+        theFnc();
+
+        function test(name1,name2){
+            document.write(name1+"안녕하세요","<br>")
+            document.write(name2+"안녕하세요","<br>")
+        }
+
+        test("홍길동","김철수");
+
+        function myFnc(name,area){
+            document.write("안녕하세요."+name+"입니다.<br>")
+            document.write("사는곳은"+area+"입니다.<br><br>")
+        }
+
+        myFnc("홍길동","서울");
+        myFnc("김부자","부산");
+    </script>
+    
+    <script>
+        //function login(id,pw){
+            if(id =="hanguk"){
+                if(pw =="1234"){
+                    document.write(id+"님 방문을 환영합니다.");
+                
+                }else{
+                    alert("잘못된 비밀번호입니다.")
+                }
+            }else{
+                alert("존재하지 않는 아이디입니다.");
+            }
+        }
+        
+        let user_id =prompt("아이디를 입력하세요","");
+        let user_pw =prompt("패스워드를 입력하세요.","");
+
+        login(user_id,user_pw);
+    </script>
+
+    <script>
+    function calc(){
+        let result = 100 +200;
+        return result;
+    }
+
+    let num = calc();
+    document.write(num);
+
+    function myFnc(a,b){
+        let num = a*b;
+        return num
+    }
+    let result =myFnc(10,3);
+    document.write("<br>"+result);
+
+
+    </script>
+
+    
+</body>
+</html>

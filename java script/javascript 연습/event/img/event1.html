@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1 id="textc">과일</h1>
+    <input type="radio" name="a" id="btn1" checked><span>토마토</span>
+    <input type="radio" name="a" id="btn2" ><span>바나나</span>
+    <input type="radio" name="a" id="btn3" ><span>수박</span>
+
+    <script>
+        this.onclick=function(e){
+            if(e.target.id=="btn1"){textc.style.backgroundColor="tomato";}
+            if(e.target.id=="btn2"){textc.style.backgroundColor="gold";}
+            if(e.target.id=="btn3"){textc.style.backgroundColor="green";}
+        }
+    </script>
+</body>
+</html>

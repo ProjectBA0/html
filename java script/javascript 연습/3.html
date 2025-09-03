@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    <img src="img/banner_1.jpg" id="ich" />
+
+    <script>
+        let ct = 0;
+        let imgs =new Array("img/banner_1.jpg", "img/banner_2.jpg", "img/banner_3.jpg");
+
+        setTimeout(progress, 1000);
+
+        function progress() {
+            let ch = document.getElementById('ich');
+            ch.src = imgs[ct];
+            ct++;
+            setTimeout(progress,1000);
+            if (ct >2) {
+                ct=0;
+            }
+        }
+    </script>
+</body>
+</html>
