@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let t="Hello Thank you good luck to you";
+
+      document.write(t.charAt(16),"<br>");
+      document.write(t.indexOf("you"),"<br>");
+      document.write(t.indexOf("you",16),"<br>");
+      document.write(t.lastIndexOf("you"),"<br>");
+      document.write(t.lastIndexOf("you",25),"<br>");
+      document.write(t.match("luck"),"<br>");
+      document.write(t.search("you"),"<br>");
+      document.write(t.substr(21,4),"<br>");
+      document.write(t.substring(6,12),"<br>");
+      document.write(t.replace("you","me"),"<br>");
+      document.write(t.toLowerCase(),"<br>");
+      document.write(t.toUpperCase(),"<br>");
+      document.write(t.length,"<br />");
+      let s=t.split(" ");
+      document.write(s[0],"<br>");
+      document.write(s[4],"<br>");
+    </script>
+
+    <script>
+
+      let userName = prompt("당신의 영문 이름은?","");
+      let upperName = userName.toUpperCase(); //영문을 대문자로 바꿉니다.
+      document.write(upperName,"<br>");
+      let userNum = prompt("당신의 연락처는?","");
+      let result = userNum.substring(0, userNum.length-4)+"****";
+      document.write(result,"<br>");
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>윈도우 위치/크기 제어</title>
+</head>
+<body>
+  <h3>새 창 열기 및 제어</h3>
+  <button onclick="openWindow()">새 창 열기</button>
+
+  <script>
+    let newWindow;
+
+    function openWindow() {
+      // 새 창 열기 (팝업 차단 해제 필요)
+      newWindow = window.open('', '', 'width=300,height=300,left=100,top=100');
+      newWindow.document.write(`
+        <h3>제어 가능한 새 창</h3>
+        <button onclick="window.moveBy(-10, 0)">←</button>
+        <button onclick="window.moveBy(10, 0)">→</button>
+        <button onclick="window.moveBy(0, -10)">↑</button>
+        <button onclick="window.moveBy(0, 10)">↓</button>
+        <button onclick="window.resizeBy(10, 10)">+ 크기</button>
+        <button onclick="window.resizeBy(-10, -10)">- 크기</button>
+      `);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <h2>clearInterval() 함수로 setInterval() 중지하기</h2>
+
+    <button onclick="startAlert();">setInterval()</button>
+    <button onclick="stopAlert();">clearInterval()</button>
+
+    <script>
+        startAlert = function () {
+            playAlert = setInterval(function () {
+                console.log('네이버');
+                setTimeout(() => { console.log('stop') }, 1000);
+                console.log('restart')
+            }, 3000);
+        };
+
+        stopAlert = function () {
+            clearInterval(playAlert);
+        };
+    </script>
+
+</body>
+
+</html>
