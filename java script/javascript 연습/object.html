@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+    name :"",
+    age :0,
+    introduce : function(name,age){
+        this.name=name;
+        this.age=age;
+    return `My name is ${name} 나이는 ${age} `
+    }
+}
+
+    person.introduce("이순신",45);
+
+    person.introduce("세종대왕",60);
+
+    let  o3 = person.introduce("광개토대왕",60);
+        
+    console.log(o3)
+    </script>
+</body>
+</html>
