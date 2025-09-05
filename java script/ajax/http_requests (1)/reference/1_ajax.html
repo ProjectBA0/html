@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>우리반 학생파일 - AJAX</title>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+	<script>
+		$(function () {
+			$.ajax({
+				url: "./class.json",
+				dataType: "json",
+				success: function (data) {
+					if (data.length > 0) {
+						const tb = $("<table/>");
+
+						for (let i in data) {
+							let $id = data[i].id;
+							let $name = data[i].name;
+							let $gender = data[i].gender;
+							let $addr = data[i].addr;
+
+							let row = $("<tr/>").append(
+								$("<td/>").text($id),
+								$("<td/>").text($name),
+								$("<td/>").text($gender),
+								$("<td/>").text($addr),
+							);
+
+							tb.append(row);
+						}
+
+						$(".wrap").append(tb);
+					}
+				}
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<div class="wrap"></div>
+
+	<!--input-->
+	<input id="myInput" type="text" laceholder="Search..">
+
+	<script>
+		//search
+		$("#myInput").on("keyup", function () {
+			let value = $(this).val();
+			$(".wrap tr").filter(function () {
+				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			});
+		});
+	</script>
+</body>
+
+</html>

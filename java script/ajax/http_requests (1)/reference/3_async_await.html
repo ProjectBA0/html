@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리반 학생파일 - async/await</title>
+</head>
+
+<body>
+    <input id="myInput" type="text" placeholder="Search.." onkeyup="searchTable()">
+    <div class="wrap"></div>
+
+    <script>
+        let originalData = []; // 원본 데이터를 저장할 변수
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                const response = await fetch("./class.json");
+                if (!response.ok) throw new Error("데이터를 불러오는 데 실패했습니다.");
+
+                originalData = await response.json();
+                renderTable(originalData); // 테이블 렌더링
+            } catch (error) {
+                console.error("오류 발생:", error);
+            }
+        });
+
+        function renderTable(data) {
+            const wrap = document.querySelector(".wrap");
+            wrap.innerHTML = "";
+
+            if (data.length > 0) {
+                const table = document.createElement("table");
+
+                data.forEach(item => {
+                    const row = document.createElement("tr");
+
+                    ["id", "name", "gender", "addr"].forEach(key => {
+                        const cell = document.createElement("td");
+                        cell.textContent = item[key];
+                        row.appendChild(cell);
+                    });
+
+                    table.appendChild(row);
+                });
+
+                wrap.appendChild(table);
+            }
+        }
+
+        document.getElementById("myInput").addEventListener("input", function () {
+            const searchText = this.value.toLowerCase();
+            const filteredData = originalData.filter(item =>
+                item.name.toLowerCase().includes(searchText) ||
+                item.gender.toLowerCase().includes(searchText) ||
+                item.addr.toString().includes(searchText)
+            );
+            renderTable(filteredData);
+        });
+    </script>
+
+</body>
+
+</html>
