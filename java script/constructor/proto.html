@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수 연습</title>
+</head>
+<body>
+    <script>
+        function Common_selectShop(category,volume,kgPerPrice){
+            this.category = category;
+            this.volume = volume;
+            this.kgPerPrice = kgPerPrice;
+            }
+
+            Common_selectShop.prototype.fullPrice = function(){
+                const p = document.createElement("p");
+                p.textContent = `${this.category} ${this.volume}장은 ${this.volume * this.kgPerPrice}원 입니다.`
+                document.body.appendChild(p);
+            
+        }
+
+        const customerSelect = new Common_selectShop('티셔츠',3,25000);
+        customerSelect.fullPrice();
+
+
+    </script>
+
+
+</body>
+</html>

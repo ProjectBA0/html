@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 -Spread Operator</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            a :10,
+            b :20
+        }
+
+        const copyObj =obj;
+        obj.a = 50;
+        copyObj.b = 70;
+
+        console.log(obj);
+        console.log(copyObj);
+        const newObj = {...obj};
+        newObj.a = 30;
+        obj.b= 5;
+        console.log(obj);
+        console.log(newObj);
+
+        const arr = [1,2,3];
+        const newArr = [...arr];
+        newArr[0]=5;
+        console.log(newArr);
+        console.log(arr);
+
+        
+    </script>
+</body>
+</html>

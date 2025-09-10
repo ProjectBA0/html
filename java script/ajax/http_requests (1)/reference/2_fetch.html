@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리반 학생파일 - Fetch</title>
+</head>
+
+<body>
+    <div class="wrap"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("./class.json")
+                .then(response => {
+                    console.log(response);
+                    if (!response.ok) throw new Error("데이터를 불러오는 데 실패했습니다.");
+
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    if (data.length > 0) {
+                        const table = document.createElement("table");
+
+                        data.forEach(item => {
+                            const row = document.createElement("tr");
+
+                            ["id", "name", "gender", "addr"].forEach(key => {
+                                const cell = document.createElement("td");
+                                cell.textContent = item[key];
+                                row.appendChild(cell);
+                            });
+                            table.appendChild(row);
+                        });
+
+                        document.querySelector(".wrap").appendChild(table);
+                    }
+                })
+                .catch(error => {
+                    console.error("오류 발생:", error);
+                })
+        });
+    </script>
+
+</body>
+
+</html>
