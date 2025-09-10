@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+    <style>
+        .box {
+            width: 200px;
+            float: left;
+            background-color:  gold;
+            text-align: center;
+        }
+
+        .box p {
+            font-size: 11px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+</head>
+<body>
+    <h1>도서 API</h1>
+    <div class="box"></div>
+
+    <script>
+        async function bookData() {
+            const params = new URLSearchParams({
+                target: "title",
+                query: "미움받을 용기"
+            });
+
+            try {
+                const response = await fetch(`https://dapi.kakao.com/v3/search/book?${params}`, {
+                    method: 'GET' ,
+                    headers: {
+                        Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"
+                    }
+                    });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP 오류! 상태코드: ${response.status}`);
+                }
+                const data = await response.json();
+
+                const boxElement = document.querySelector(".box");
+
+                const imgElement =document.createElement("img");
+                imgElement.src = data.documents[0].thumbnail;
+                boxElement.appendChild(imgElement);
+
+                const titleElement = document.createElement("h3");
+                titleElement.textContent = data.document[0].title;
+                boxElement.appendChild(titleElement);
+
+                const authorElement = document.createElement("h6");
+                authorElement.textContent = data.document[0].authors;
+                boxElement.appendChild(authorElement);
+
+                let str = data.document[0].contents.substring(0,60);
+
+                const contentsElement = document.createElement("p");
+                contentsElement.textContent = str;
+                boxElement.appendChild(contentsElement);
+
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function loadData() {
+            const REST_API_KEY = '24a827a27e19b0001a3c2a49b71c8dbb'
+            const params = new URLSearchParams({
+                query : "자바스크립트" ,
+                target : "title"
+            })
+            const url = `https://dapi.kakao.com/v3/search/book?${params}`;
+
+        try {
+            const response = await fetch(url , {
+                method:'GET',
+                headers: {Authorization :`KaKaoAK ${REST_API_KEY}`}
+            })
+            if (!response.ok) {
+                throw new Error('HTTP오류-상태코드 :'+response.status);
+            const data = await response.json();
+            console.log(data);
+
+            }
+        } catch (error) {
+
+            console.log("에러발생",error);
+        }
+
+
+        }
+    loadData();        
+    </script>    
+</body>
+</html>

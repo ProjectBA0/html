@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - 기본 매개 변수</title>
+</head>
+<body>
+    <script>
+        //es5
+        const foo = (a,b,c) => {
+            console.log(a,b,c)
+        }
+
+        foo('a');
+
+        //es6 - default parameter
+        const func = (a='a',b='b',c='c') => {
+            console.log(a,b,c);
+        }
+
+        func('bsh');
+        func();
+    </script>
+</body>
+</html>

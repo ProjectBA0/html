@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - 비구조화 할당</title>
+</head>
+<body>
+    <script>
+
+        const contacts = {
+            company: "TokTokHan",
+            name: ".dev",
+            age:1
+        };
+
+       // let company = contacts.company;
+      //  let name =contacts.name;
+      //  let age = contacts.age;
+        let {company,name,age} =contacts 
+
+        document.write(company + "<br>" + name + "<br>" + age);
+    </script>
+</body>
+</html>

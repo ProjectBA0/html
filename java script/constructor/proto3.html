@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입</title>
+</head>
+<body>
+    <script>
+        function Common_Meatshop(category,volume,kgPerPrice){
+            this.category = category;
+            this.volume =volume;
+            this.kgPerPrice =kgPerPrice;
+        }
+
+        Common_Meatshop.prototype.fullPrice = function(){
+            document.write(`${this.category}고기 ${this.volume}kg은 ${this.volume * this.kgPerPrice}원 입니다.`)
+        }
+
+        const customerSelect = new Common_Meatshop('소',5,10000);
+        customerSelect.fullPrice();
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+        function Common_drink(category, volume, pricePerGlass) {
+            this.category = category;
+            this.volume = volume;
+            this.pricePerGlass = pricePerGlass;
+            this.fullPrice = function() {
+                const p = document.createElement("p"); // 변수 이름을 p로
+                p.textContent = `${this.category} ${this.volume}잔은 ${this.volume * this.pricePerGlass}원 입니다.`;
+                document.body.appendChild(p);
+            }
+        }
+
+        const customerSelect = new Common_drink("맥주", 5, 4000);
+        customerSelect.fullPrice();
+        </script>
+
+        
+</body>
+</html>
